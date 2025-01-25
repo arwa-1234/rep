@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Forum&display=swap');
+
+:root{
+    --primary: #536942;
+    --secondary-color:#FFD936;
+    --white: #efefef;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "DM Sans", sans-serif;
+    color: var(--primary);
+}
+
+#main{
+    background-image: url(assest/main.png);
+    min-height: 70vh;
+    background-position: bottom center;
+    background-size: cover;
+}
+a{
+    text-decoration: none;
+}
+.container{
+    max-width: 1200px;
+    padding: 16px;
+    margin: auto;
+
+}
+section{
+    margin: 80px auto;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.nav-list{
+    display: flex;
+    list-style: none;
+    gap: 28px;
+    align-items: center;
+}
+
+.nav-list a{
+    color: var(--white);
+}
+
+.btn{
+    padding: 12px 17px;
+    background: transparent;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-secondary{
+    border: 2px solid white;
+    color: var(--white);
+    font-weight: bold;
+}
+
+.btn-primary{
+    border: none;
+    background: var(--secondary-color);
+    color: var(--primary);
+}
+
+.main-contant{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    color: white;
+
+    & p{
+        max-width: 250px;
+        margin-bottom: 10px;
+    }
+}
+
+.main-contant .intro-heading{
+    font-size: 50px;
+}
+.main-contant .main-heading{
+   font-size: 110px;
+   margin-top: -20px;
+}
+
+.menu-btn{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: none;
+    width: 30px;
+}
+
+.section-title h1{
+    font-size: 50px;
+    text-align: center;
+}
+
+.section-title .line{
+    width: 150px;
+    height: 4px;
+    border: 10px;
+    background: var(--secondary-color);
+    margin: auto;
+    
+}
+
+.services{
+    margin-top: 40px;
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service{
+    width: 360px;
+
+    & img{
+        min-width: 100%;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+}
+
+.service img:hover{
+    transform: scale(1.06);
+}
+
+#testimonial{
+    background: #f1f2fa;
+
+
+    & h1{
+        font-size: 30px;
+        font-family: 'Forum', sans-serif;
+        text-align: center;
+       
+    }
+
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-width: 190px;
+        gap: 30px;
+        padding: 50px 15px;
+    }
+
+    .profile{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+}
+
+#about-us .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 130px;
+}
+
+#about-us .container .about-contant{
+    min-width: 390px;
+    display: flex;
+    flex-direction: column; 
+    gap: 18px;
+    align-items: start;
+}
+
+#about-us .container .about-contant h1{
+    font-family: 'Forum',sans-serif;
+    font-size: 30px;
+}
+
+#quation{
+    min-height: 500px;
+    background-image: url(assest/main-2.png);
+    background-position: bottom center;
+    background-size: cover;
+}
+
+#quation .container{
+    min-width: 380px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    text-align: center;
+}
+
+#quation .container h1{
+    font-size: 50px;
+
+}
+footer{
+    margin-top: -60px;
+}
+footer .container{
+    display: flex;
+    padding: 20px 16px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 16px;
+   
+    & a{
+        color: #80a167;
+    }
+
+}
+
+@media screen and (max-width:850px){
+    .menu-btn{
+        display: block;
+    }
+    .nav-list{
+        flex-direction: column;
+        background: gray;
+        position: absolute;
+        top: 0;
+        right: -900px;
+        width: 80%;
+        height: 100vh;
+        padding-top: 80px;
+        transition: all 0.5s linear;
+
+        & li:not(:last-child){
+            text-align: left;
+            width: 100%;
+            padding: 10px 30px;
+            border-bottom: 1px solid var(--white);
+        }
+    }
+
+    .nav-list.active{
+        right: 0;
+    }
+
+    #testimonial .container{
+        max-width: 370px;
+        padding: 50px 42px;
+       
+    }
+
+    #testimonial h1{
+        font-size: 20px;
+    }
+
+    #about-us .container{
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    #about-us .container .about-contant h1{
+        font-size: 20px;
+    }
+
+    #about-us .container .about-contant p{
+        font-size: 14px;
+    }
+
+    #quation .container h1{
+        text-align: center;
+        font-size: 40px;
+    }
+
+    #quation .container p{
+        text-align: center;
+        font-size: 15px;
+    }
+
+    footer .container{
+        flex-direction: column;
+        gap: 20px;
+    }
+}
